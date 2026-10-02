@@ -1,5 +1,3 @@
-"""Utilities for calculating binary classification performance metrics."""
-
 import numpy as np
 import plotly.graph_objects as go
 from sklearn.datasets import fetch_openml
