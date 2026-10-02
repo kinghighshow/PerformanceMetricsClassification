@@ -44,7 +44,7 @@ The four individual notebooks are kept as the record of who wrote what. The coll
    pip install -r requirements.txt
    ```
 2. Start Jupyter from the repository root and open `Collated_Team_Notebook.ipynb`.
-3. Run all cells from the top. The setup cell adds `Individual_notebooks` to the import path, so the helper classes in `Individual_notebooks/src/` import without any extra setup. The notebook does not depend on any variable from the instructor's notebook.
+3. Run all cells from the top. The setup cell imports the helper classes from `Individual_notebooks/src/` (as `Individual_notebooks.src.<module>`), so no extra setup is needed. The notebook does not depend on any variable from the instructor's notebook.
 
 The notebook downloads MNIST and Fashion-MNIST from OpenML the first time it runs, so it needs an internet connection and takes a little while.
 
