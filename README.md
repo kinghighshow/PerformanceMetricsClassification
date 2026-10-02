@@ -2,7 +2,7 @@
 
 **Final_Project_Group 1** | Use case: MNIST image classification
 
-This repository contains our work for the Performance Metrics Classification workshop. We worked through the instructor's notebook (adapted from Géron's chapter 3), `PerformanceMetricsClassification.ipynb`, and answered every "To the student" talking point. Each member wrote their part in an individual notebook, and `Collated_Team_Notebook.ipynb` brings the four parts together in one notebook.
+This repository contains our work for the Performance Metrics Classification workshop. We started from the instructor's notebook (adapted from Géron's chapter 3), ran it end to end, and then answered every "To the student" talking point in a new section at the bottom of the notebook.
 
 ## Team
 
@@ -17,8 +17,7 @@ This repository contains our work for the Performance Metrics Classification wor
 
 ```
 PerformanceMetricsClassification/
-├── PerformanceMetricsClassification.ipynb   # instructor's notebook
-├── Collated_Team_Notebook.ipynb             # our collated answers (final notebook)
+├── PerformanceMetricsClassification.ipynb   # instructor notebook + our team section (final notebook)
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
@@ -34,7 +33,7 @@ PerformanceMetricsClassification/
         └── metrics_calculator.py            # MetricsCalculator
 ```
 
-The four individual notebooks are kept as the record of who wrote what. The collated notebook combines them under one header per person (`## Antonio`, `## Sultan`, `## Eche`, `## John`) so the answers read in order.
+The four individual notebooks are kept as the record of who wrote what. The final notebook combines them under one header per person (`## Antonio`, `## Sultan`, `## Eche`, `## John`) so the answers read in order.
 
 ## How to run it
 
@@ -43,8 +42,8 @@ The four individual notebooks are kept as the record of who wrote what. The coll
    python -m venv .venv
    pip install -r requirements.txt
    ```
-2. Start Jupyter from the repository root and open `Collated_Team_Notebook.ipynb`.
-3. Run all cells from the top. The setup cell imports the helper classes from `Individual_notebooks/src/` (as `Individual_notebooks.src.<module>`), so no extra setup is needed. The notebook does not depend on any variable from the instructor's notebook.
+2. Start Jupyter from the repository root and open `PerformanceMetricsClassification.ipynb`.
+3. Run all cells from the top. The first cell of the team section adds `Individual_notebooks` to the import path, so the helper classes in `Individual_notebooks/src/` import without any extra setup.
 
 The notebook downloads MNIST and Fashion-MNIST from OpenML the first time it runs, so it needs an internet connection and takes a little while.
 
@@ -107,10 +106,10 @@ All reusable code is written as class methods in `Individual_notebooks/src/`, on
 | Requirement | Where it is covered |
 |---|---|
 | Remote repository named "PerformanceMetricsClassification" | This repository |
-| Instructor's repository cloned and notebook worked through | `PerformanceMetricsClassification.ipynb` (instructor's notebook, kept in the repo) |
-| Every "To the student" talking point answered (13 hits plus the folds research prompt) | `Collated_Team_Notebook.ipynb`; the opening table lists each talking point and who answered it |
-| Section answering all questions and challenges | `Collated_Team_Notebook.ipynb`, with one header per team member |
-| Notebooks copied to our own repository | Root of this repository and `Individual_notebooks/` |
+| Instructor's repository cloned and notebook worked through | `PerformanceMetricsClassification.ipynb` |
+| Every "To the student" talking point answered (13 hits plus the folds research prompt) | Team section at the end of the notebook; the opening table lists each talking point and who answered it |
+| Section added to the notebook answering all questions and challenges | Team section, with one header per team member |
+| Notebook copied to our own repository | Root of this repository |
 | README with an introduction and a summary of insights | This file |
 | Coding standards and best practices | Helper logic is in class methods under `Individual_notebooks/src/`; notebooks only import and call them |
 | One PDF with the workshop title, names and a link to this repository | Submitted separately before the deadline |
