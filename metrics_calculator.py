@@ -2,6 +2,9 @@
 
 import numpy as np
 import plotly.graph_objects as go
+from sklearn.datasets import fetch_openml
+from sklearn.linear_model import SGDClassifier
+from sklearn.model_selection import cross_val_predict
 from sklearn.metrics import confusion_matrix, precision_recall_curve
 
 
@@ -121,3 +124,25 @@ class MetricsCalculator:
         )
 
         return figure
+
+    @staticmethod
+    def prepare_mnist_threshold_data() -> tuple[np.ndarray, np.ndarray]:
+        """Create MNIST binary labels and decision scores for threshold analysis."""
+        mnist = fetch_openml("mnist_784", version=1, as_frame=False)
+
+        x_train = mnist.data[:60000]
+        y_train = mnist.target[:60000]
+
+        y_train_5 = y_train == "5"
+
+        classifier = SGDClassifier(random_state=42)
+
+        y_scores = cross_val_predict(
+            classifier,
+            x_train,
+            y_train_5,
+            cv=3,
+            method="decision_function"
+        )
+
+        return y_train_5, y_scores
