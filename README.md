@@ -33,3 +33,26 @@ Examples include:
 
 For more background, see the Wikipedia article on classification and classification algorithms.
 
+## Environment setup
+
+Create and activate a virtual environment from the project root:
+
+```powershell
+py -3.11 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+On macOS or Linux, use `python3 -m venv .venv` and activate it with
+`source .venv/bin/activate`.
+
+Install the project dependencies and register the environment as a Jupyter
+kernel:
+
+```shell
+python -m pip install -r requirements.txt
+python -m ipykernel install --user --name performance-metrics-classification --display-name "Python (Performance Metrics Classification)"
+```
+
+Use this environment to run Python scripts with `python path/to/script.py`, or
+select **Python (Performance Metrics Classification)** as the kernel in
+Jupyter.
