@@ -38,7 +38,7 @@ For more background, see the Wikipedia article on classification and classificat
 Create and activate a virtual environment from the project root:
 
 ```powershell
-py -3.11 -m venv .venv
+py -3.14 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
